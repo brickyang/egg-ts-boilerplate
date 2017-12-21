@@ -1,0 +1,45 @@
+{
+  "name": "egg-ts-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for Egg.js app using TypeScript.",
+  "dependencies": {
+    "egg": "^2.0.0",
+    "egg-mongo-native": "^2.1.0",
+    "egg-redis": "^1.0.2",
+    "egg-scripts": "^2.1.0",
+    "tslib": "^1.8.1",
+    "typescript": "^2.6.2"
+  },
+  "devDependencies": {
+    "egg-bin": "^4.3.5",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.13.0",
+    "tslint": "^5.8.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "clean": "rimraf app/**/*.{js,map} app/*.{js,map} config/**/*.{js,map}",
+    "tsc": "tsc -p tsconfig.json",
+    "tsc:w": "tsc -p tsconfig.json -w",
+    "start": "egg-scripts start --daemon",
+    "stop": "egg-scripts stop",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "tslint -c tslint.json .",
+    "ci": "npm run lint && npm run cov"
+  },
+  "ci": {
+    "version": "8, 9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:brickyang/egg-ts-boilerplate.git"
+  },
+  "author": "brick <brick.c.yang@gmail.com>",
+  "license": "MIT"
+}
