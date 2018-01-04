@@ -9,7 +9,10 @@ coverage/
 run/
 *.sw*
 *.un~
-
+app/**/*.js
+app/*.js
+config/*.js
+*.js
 
 # General
 .DS_Store
