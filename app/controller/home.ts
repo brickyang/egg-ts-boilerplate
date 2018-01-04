@@ -1,6 +1,6 @@
 import { Controller } from 'egg';
 
-export default class AcTokenController extends Controller {
+export default class HomeController extends Controller {
   public index() {
     const { ctx } = this;
 
