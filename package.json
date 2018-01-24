@@ -1,6 +1,6 @@
 {
   "name": "egg-ts-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Boilerplate for Egg.js app using TypeScript.",
   "dependencies": {
     "egg": "^2.0.0",
