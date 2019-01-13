@@ -1,9 +1,13 @@
-export class DefaultConfig {
-  readonly keys = '1234';
+import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
 
-  // learn how to use MongoDB in Egg.js
-  // visit https://github.com/brickyang/egg-mongo-native
-  readonly mongo = {
+export default (appInfo: EggAppInfo) => {
+  const config: PowerPartial<EggAppConfig> = {};
+
+  config.keys = appInfo.name + '_1547377172976_3476';
+
+  config.middleware = [];
+
+  config.mongo = {
     client: {
       host: 'localhost',
       port: '27017',
@@ -12,6 +16,6 @@ export class DefaultConfig {
       password: 'password',
     },
   };
-}
 
-export default new DefaultConfig();
+  return { ...config };
+};

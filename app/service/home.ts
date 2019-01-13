@@ -5,7 +5,7 @@ export default class HomeService extends Service {
     super(ctx);
   }
 
-  index(): string {
+  public index(): string {
     return 'I love Egg.js and TypeScript.';
   }
 }

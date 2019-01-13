@@ -7,7 +7,7 @@ module.exports = () => {
       type: 'worker',
     },
     async task(ctx: Context): Promise<void> {
-      ctx.service.home.index() // you can access the service via ctx
+      ctx.service.home.index(); // you can access the service via ctx
       console.log(`[schedule] Schduled task running.`);
     },
   };

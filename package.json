@@ -2,38 +2,46 @@
   "name": "egg-ts-boilerplate",
   "version": "1.0.1",
   "description": "Boilerplate for Egg.js app using TypeScript.",
+  "egg": {
+    "typescript": true,
+    "require": [
+      "egg-ts-helper/register"
+    ]
+  },
   "dependencies": {
-    "egg": "^2.0.0",
-    "egg-mongo-native": "^2.1.0",
-    "egg-scripts": "^2.1.0",
-    "tslib": "^1.8.1",
-    "typescript": "^2.6.2"
+    "egg": "^2.14.2",
+    "egg-mongo-native": "^3.3.0",
+    "egg-scripts": "^2.11.0"
   },
   "devDependencies": {
-    "egg-bin": "^4.3.5",
-    "egg-ci": "^1.8.0",
-    "egg-mock": "^3.13.0",
-    "tslint": "^5.8.0"
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.18",
+    "@types/supertest": "^2.0.7",
+    "egg-bin": "^4.10.0",
+    "egg-mock": "^3.21.0",
+    "egg-ts-helper": "^1.20.0",
+    "tslib": "^1.9.3",
+    "tslint": "^5.12.1",
+    "typescript": "^3.2.2"
   },
   "engines": {
     "node": ">=8.9.0"
   },
   "scripts": {
-    "clean": "rimraf app/**/*.{js,map} app/*.{js,map} config/**/*.{js,map}",
-    "tsc": "tsc -p tsconfig.json",
-    "tsc:w": "tsc -p tsconfig.json -w",
-    "start": "egg-scripts start --daemon",
+    "start": "egg-scripts start --daemon --title=egg-server-egg-ts-boilerplate",
     "stop": "egg-scripts stop",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
-    "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",
+    "test": "npm run lint -- --fix && npm run test-local",
     "cov": "egg-bin cov",
+    "tsc": "ets && tsc -p tsconfig.json",
+    "ci": "npm run lint && npm run cov",
     "lint": "tslint -c tslint.json --project .",
-    "ci": "npm run lint && npm run cov"
+    "clean": "ets clean"
   },
   "ci": {
-    "version": "8, 9"
+    "version": "8, 10"
   },
   "repository": {
     "type": "git",

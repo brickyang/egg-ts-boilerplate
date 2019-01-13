@@ -1,10 +1,12 @@
-const BAR = Symbol('Application#bar');
+// const BAR = Symbol('Application#bar');
 
-module.exports = {
-  get bar(): string {
-    if (!this[BAR]) {
-      this[BAR] = 'foo';
-    }
-    return this[BAR];
-  },
+export default {
+  // get bar(): string {
+  //   if (!this[BAR]) {
+  //     this[BAR] = 'foo';
+  //   }
+
+  //   return this[BAR];
+  // },
+  bar: 'foo',
 };

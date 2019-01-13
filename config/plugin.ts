@@ -1,5 +1,10 @@
-export const mongo = {
-  // make sure MongoDB is running before enable this plugin
-  enable: false,
-  package: 'egg-mongo-native',
+import { EggPlugin } from 'egg';
+
+const plugin: EggPlugin = {
+  mongo: {
+    enable: false,
+    package: 'egg-mongo-native',
+  },
 };
+
+export default plugin;

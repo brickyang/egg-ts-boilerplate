@@ -1,7 +1,13 @@
-import { Application } from 'egg';
+import { Application, IBoot } from 'egg';
 
-export default (app: Application) => {
-  app.beforeStart(async () => {
-    console.log(app.bar);
-  });
-};
+export default class AppBootHook implements IBoot {
+  private readonly app: Application;
+
+  constructor(app: Application) {
+    this.app = app;
+  }
+
+  async didReady() {
+    console.log((this.app as any).bar);
+  }
+}
