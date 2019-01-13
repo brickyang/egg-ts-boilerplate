@@ -8,7 +8,7 @@ This is an example about how to use TypeScript in Egg.js. It shows how to use `c
 $ npm install
 $ npm run dev
 
-// visit http://127.0.0.1:7001 (might be another port if 7001 is not available).
+#  visit http://127.0.0.1:7001 (might be another port if 7001 is not available).
 ```
 
 This exmple imports `egg-mongo-native` plugin to use MongoDB but default to `enable: false` in case no MongoDB client is running in your environment. Feel free to enable and try it.
