@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 const mm = require('egg-mock');
 
 describe('test/app/controller/home.test.js', () => {
@@ -17,7 +17,7 @@ describe('test/app/controller/home.test.js', () => {
   it('should GET /', async () => {
     return app
       .httpRequest()
-      .get("/")
+      .get('/')
       .expect('I love Egg.js and TypeScript.')
       .expect(200);
   });
