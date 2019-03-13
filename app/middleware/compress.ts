@@ -1,2 +1,2 @@
-import * as compress from "koa-compress";
+import * as compress from 'koa-compress';
 export default compress;
